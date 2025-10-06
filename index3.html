@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Osamah Ba Hamid — MS-MIS Student & Graduate Teaching Assistant</title>
+  <meta name="description" content="MS‑MIS student & Graduate Teaching Assistant. IT compliance, cybersecurity, networking (TCP/IP, Wireshark), AWS. View experience, skills, and projects." />
+  <meta name="theme-color" content="#0F3D5E" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Osamah Ba Hamid — MS‑MIS Student & GTA" />
+  <meta property="og:description" content="MS‑MIS student & GTA. IT compliance (SOX, NERC CIP), networking labs, AWS." />
+  <meta property="og:image" content="images/headshot.jpg" />
+  <meta property="og:url" content="https://example.com" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="images/favicon.ico" />
+  <!-- Preload avatar for snappy header render -->
+  <link rel="preload" as="image" href="images/headshot.jpg" />
+
+  <style>
+    :root { --brand-1:#0F3D5E; --brand-2:#E7A33E; --radius:18px; --maxw:1100px; --shadow:0 8px 32px rgba(0,0,0,.25);
+      --bg:#ffffff; --panel:#f6f8fb; --text:#0b1220; --muted:#5b6575; --chip:#e9eef6; --border:#dde3ee; --link:var(--brand-1);
+      --h1:clamp(28px,3.8vw,42px); --h2:clamp(13px,1.3vw,15px); --pad:24px; --pad-lg:28px; --gap:24px; --gap-lg:28px; }
+    @media (prefers-color-scheme: dark) { :root{--bg:#0b0d10;--panel:#12161c;--text:#e6edf3;--muted:#9aa4b2;--chip:#1f2630;--border:#1e2630;--link:#58a6ff;} }
+
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;line-height:1.6}
+    a{color:var(--link);text-decoration:none}
+    a:hover{text-decoration:underline}
+    a:focus-visible, button:focus-visible{outline:3px solid var(--brand-2);outline-offset:2px}
+    img{max-width:100%;height:auto}
+    @media (prefers-reduced-motion: reduce){ *{scroll-behavior:auto !important; animation:none !important; transition:none !important} }
+
+    .max{max-width:var(--maxw);margin:0 auto;padding:var(--pad)}
+
+    /* Header + sticky top nav */
+    header{position:sticky;top:0;z-index:5;background:linear-gradient(180deg,rgba(0,0,0,.05),transparent);border-bottom:1px solid var(--border);backdrop-filter:saturate(140%) blur(6px)}
+    .hero{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+    .header-left{display:flex;align-items:center;gap:14px}
+    .name{font-size:var(--h1);font-weight:800;letter-spacing:.2px;margin:0}
+    .title{font-size:clamp(14px,1.6vw,18px);color:var(--muted);margin:.25rem 0 0}
+    .actions{display:flex;gap:10px;margin-top:10px}
+    .btn{appearance:none;border:1px solid var(--border);background:var(--chip);color:var(--text);padding:10px 14px;border-radius:10px;cursor:pointer}
+    .btn:hover{border-color:#b6c2d3}
+
+    .topnav{position:sticky;top:70px;z-index:4;background:transparent}
+    .topnav .nav{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end}
+    .chip{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;background:var(--chip);border:1px solid var(--border);border-radius:999px;font-size:14px}
+
+    /* Layout */
+    .grid{display:grid;grid-template-columns:280px 1fr;gap:var(--gap);margin-top:var(--gap)}
+    @media (max-width:900px){.grid{grid-template-columns:1fr}}
+
+    .card{background:var(--panel);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow)}
+    .pad{padding:var(--pad-lg)}
+    .section-title{font-size:var(--h2);text-transform:uppercase;letter-spacing:1.1px;color:var(--muted);margin:0 0 12px}
+    .section-title a{color:inherit;text-decoration:none}
+    .section-title a:hover{text-decoration:underline}
+
+    .pills{display:flex;flex-wrap:wrap;gap:10px}
+    .pill{background:var(--chip);border:1px solid var(--border);padding:8px 12px;border-radius:999px;font-size:13px}
+
+    .item{padding:18px;border-top:1px solid var(--border)}
+    .item:first-child{border-top:none}
+    .item h3{margin:0 0 6px;font-size:18px}
+    .meta{color:var(--muted);font-size:14px}
+    .bullets{margin:10px 0 0 0;padding-left:18px}
+    .bullets li{margin:6px 0}
+
+    /* Project grid */
+    .projects{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px}
+    .card-mini{background:var(--panel);border:1px solid var(--border);border-radius:14px;box-shadow:var(--shadow)}
+    .card-mini .thumb{display:block;border-bottom:1px solid var(--border)}
+    .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+    .tag{font-size:12px;border:1px solid var(--border);padding:4px 8px;border-radius:999px;color:var(--muted)}
+
+    footer{color:var(--muted);font-size:13px;margin:28px 0;text-align:center}
+
+    /* Print tweaks */
+    @media print{
+      header,.topnav,.btn{display:none !important}
+      .max{padding:0}
+      .grid{grid-template-columns:1fr 2fr;gap:12px}
+      .card,.card-mini{box-shadow:none}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="max hero">
+      <div class="header-left">
+        <img id="avatar" src="./images/headshot.jpg?v=2" alt="Portrait of Osamah Ba Hamid" width="180" height="150" style="border-radius:50%;object-fit:cover;border:2px solid var(--border)" decoding="async">
+        <div>
+          <h1 class="name">Osamah Ba Hamid</h1>
+          <p class="title">MS‑MIS Student • Graduate Teaching Assistant</p>
+          <div class="actions" role="group" aria-label="Actions">
+            <button class="btn" onclick="window.print()">Download PDF</button>
+          </div>
+        </div>
+      </div>
+      <nav class="contact" aria-label="Quick links">
+        <a class="chip" href="#about">About</a>
+        <a class="chip" href="#experience">Experience</a>
+        <a class="chip" href="#education">Education</a>
+        <a class="chip" href="#projects">Projects</a>
+        <a class="chip" href="#contact">Contact</a>
+      </nav>
+    </div>
+    <div class="max" id="img-debug" style="color:#b45309;font-size:13px;margin-top:6px"></div>
+  </header>
+
+  <main class="max grid">
+    <!-- Sidebar -->
+    <aside class="sidebar card">
+      <section class="pad" id="about" aria-labelledby="about-title">
+        <h2 class="section-title" id="about-title"><a href="#about">About</a></h2>
+        <p>Graduate MS‑MIS student and Graduate Teaching Assistant focused on IT compliance, cybersecurity, and networking. Experience supporting SOX and NERC CIP, and mentoring students on TCP/IP, Wireshark, and AWS labs.</p>
+      </section>
+
+      <!-- Skills grouped by category -->
+      <section class="pad" aria-labelledby="skills-title" style="padding-top:0">
+        <h2 class="section-title" id="skills-title"><a href="#skills">Skills</a></h2>
+        <div class="item">
+          <h3 style="margin:0 0 8px;font-size:15px">Security & Compliance</h3>
+          <div class="pills"><span class="pill">NERC CIP</span><span class="pill">SOX</span><span class="pill">Audit Docs</span><span class="pill">Risk & Controls</span></div>
+        </div>
+        <div class="item">
+          <h3 style="margin:0 0 8px;font-size:15px">Networking & Tools</h3>
+          <div class="pills"><span class="pill">Wireshark</span><span class="pill">TCP/UDP</span><span class="pill">ARP/DNS</span><span class="pill">AWS</span></div>
+        </div>
+        <div class="item">
+          <h3 style="margin:0 0 8px;font-size:15px">Data & Analytics</h3>
+          <div class="pills"><span class="pill">SQL</span><span class="pill">Python</span><span class="pill">R</span><span class="pill">Tableau</span><span class="pill">Excel</span></div>
+        </div>
+      </section>
+
+      <section class="pad" aria-labelledby="languages-title" style="padding-top:0">
+        <h2 class="section-title" id="languages-title"><a href="#languages">Languages</a></h2>
+        <div class="pills"><span class="pill">Arabic (Native)</span><span class="pill">English</span><span class="pill">German</span></div>
+      </section>
+    </aside>
+
+    <!-- Main content -->
+    <section class="main card" aria-label="Résumé details">
+      <section class="pad" id="education" aria-labelledby="edu-title">
+        <h2 class="section-title" id="edu-title"><a href="#education">Education</a></h2>
+        <div class="item"><h3>University of Arizona — <em>MS in Management Information Systems</em></h3><div class="meta">Tucson, AZ • Expected Dec 2026</div></div>
+        <div class="item"><h3>University of Arizona — <em>B.S.B.A. in Management Information Systems</em></h3><div class="meta">Tucson, AZ • May 2025 • Minor: Statistics & Data Science • Dean’s List</div></div>
+      </section>
+
+      <section class="pad" id="experience" aria-labelledby="exp-title">
+        <h2 class="section-title" id="exp-title"><a href="#experience">Experience</a></h2>
+        <div class="item"><h3>Graduate Teaching Assistant — MIS 443: Business Data Communications & Networking</h3><div class="meta">University of Arizona • Tucson, AZ • Aug 2025 – Present</div><ul class="bullets"><li>Grade networking and AWS labs; support ~30 students with TCP/IP analysis and troubleshooting in Wireshark.</li><li>Run weekly office hours; reinforce concepts (ARP, DNS, TCP/UDP) with live demos.</li></ul></div>
+        <div class="item"><h3>IT Compliance Intern</h3><div class="meta">Tucson Electric Power • Tucson, AZ • Jan 2024 – Aug 2024</div><ul class="bullets"><li>Worked on SOX and NERC CIP activities; tracked L1 significance tickets in ServiceNow to ensure timely closure.</li><li>Maintained audit documentation and supported Application Security Profiles (ASPs) management.</li></ul></div>
+        <div class="item"><h3>Engineering Intern (Quality Control Technician)</h3><div class="meta">Pace Technologies • Tucson, AZ • Jun 2022 – Aug 2022</div><ul class="bullets"><li>Organized processes to efficiently reduce cost, improve sustainability, and maximize profitability.</li><li>Prepared and conducted material analysis using metallographic equipment for customers.</li><li>Analyzed production processes to identify and resolve machinery issues.</li><li>Addressed production problems ensuring root causes were understood and solutions robust and cost-effective.</li></ul></div>
+      </section>
+
+      <section class="pad" id="projects" aria-labelledby="proj-title">
+        <h2 class="section-title" id="proj-title"><a href="#projects">Projects</a></h2>
+        <div class="projects">
+          <article class="card-mini">
+            <a class="thumb" href="#" aria-label="View Networking Labs & Cloud Demos">
+              <!-- Placeholder image area; drop an optimized 1200x675 WEBP here -->
+              <!-- <img src="images/networking.webp" alt="Wireshark TCP handshake demo" width="1200" height="675" loading="lazy"> -->
+            </a>
+            <div class="pad">
+              <h3 style="margin:0 0 6px;font-size:17px">Networking Labs & Cloud Demos</h3>
+              <p class="meta">AWS • Wireshark • TCP/UDP • ARP • DNS</p>
+              <div class="tags"><span class="tag">Packets</span><span class="tag">Cloud</span><span class="tag">Teaching</span></div>
+            </div>
+          </article>
+          <article class="card-mini">
+            <a class="thumb" href="#">
+              <!-- <img src="images/te-compliance.webp" alt="Compliance workflow overview" width="1200" height="675" loading="lazy"> -->
+            </a>
+            <div class="pad">
+              <h3 style="margin:0 0 6px;font-size:17px">IT Compliance Toolkit</h3>
+              <p class="meta">SOX • NERC CIP • ServiceNow</p>
+              <div class="tags"><span class="tag">Controls</span><span class="tag">Audit</span><span class="tag">Risk</span></div>
+            </div>
+          </article>
+          <article class="card-mini">
+            <a class="thumb" href="#">
+              <!-- <img src="images/data-analytics.webp" alt="Dashboard with KPIs and charts" width="1200" height="675" loading="lazy"> -->
+            </a>
+            <div class="pad">
+              <h3 style="margin:0 0 6px;font-size:17px">Data Analytics Mini-Dashboards</h3>
+              <p class="meta">Python • SQL • Tableau</p>
+              <div class="tags"><span class="tag">ETL</span><span class="tag">Viz</span><span class="tag">KPIs</span></div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="pad" id="contact" aria-labelledby="contact-title">
+        <h2 class="section-title" id="contact-title"><a href="#contact">Contact</a></h2>
+        <div class="item">
+          <p>Email: <a id="email-link" href="mailto:obahamid@arizona.edu">obahamid@arizona.edu</a> <button class="btn" onclick="navigator.clipboard.writeText('obahamid@arizona.edu')">Copy</button></p>
+          <p>LinkedIn: <a href="https://www.linkedin.com/in/OsamahABaHamid" target="_blank" rel="noreferrer">linkedin.com/in/OsamahABaHamid</a></p>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <footer class="max">© <span id="year"></span> Osamah Ba Hamid</footer>
+  <script>
+    // Year stamp
+    document.getElementById('year').textContent=new Date().getFullYear();
+  </script>
+  <script>
+    // Avatar debug: if image fails to load, show a helpful message
+    (function(){
+      const img = document.getElementById('avatar');
+      if(!img) return;
+      function fail(){
+        const dbg = document.getElementById('img-debug');
+        if(dbg) dbg.textContent = '⚠️ Could not load ./images/headshot.jpg — check filename, extension, and that the file is inside the images/ folder next to index.html.';
+      }
+      if(img.complete){
+        if(img.naturalWidth === 0) fail();
+      } else {
+        img.addEventListener('error', fail, {once:true});
+      }
+    })();
+  </script>
+</body>
+</html>
+</html>
